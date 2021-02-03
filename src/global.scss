@@ -1,0 +1,84 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+
+//Estilos personalizados para diferentes etiquetas HTML
+
+//Numero de noticia
+.text-primary {
+    color: var( --ion-color-primary ) !important;
+}
+
+//Nombre de noticia
+.noticia-source-name {
+    font-size: 12px;
+    color: lightgray;
+}
+
+//Estilo para botones y fondos en menu mas opciones Tab-2
+.action-dark, .action-sheet-group {
+    background-color: var( --ion-color-dark ) !important;
+    color: white !important;
+}
+
+//Estilo para los iconos para botones en menu mas opciones Tab-2
+.action-dark ion-icon {
+    color: white !important;
+}
+
+//Ocultar el icono en IOS
+.ios .action-sheet-icon {
+    display: none !important;
+}
+
+//Colocar de color primario cada botton en el tab
+.tab-selected {
+    color: var( --ion-color-primary ) !important;
+}
+
+// Animaciones
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.fast {
+    -webkit-animation-duration: 700ms;
+    animation-duration: 700ms;
+}
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+  
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }

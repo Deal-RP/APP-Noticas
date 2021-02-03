@@ -1,0 +1,18 @@
+<!-- Creacion del grid donde se despliega la parte de noticias -->
+<ion-grid fixed>
+  <ion-row>
+
+    <!-- Dividir el grid en diferentes columnas segun las dimensiones de pantallas -->
+    <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"
+              *ngFor="let noticia of noticias; let i = index">
+
+    <!-- Llamar componente de noticia y mandar los datos de noticias, favoritos e indice -->
+    <app-noticia [noticia]="noticia"
+                 [enFavoritos]="enFavoritos"
+                 [indice]="i"></app-noticia>
+    
+    
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

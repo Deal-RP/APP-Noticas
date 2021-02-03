@@ -1,0 +1,28 @@
+<ion-header no-border>
+  <ion-toolbar color="dark">
+    <ion-title>
+      Favoritos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+
+  <!-- Mostrar mensaje no hay favoritos si el arreglo esta vacio -->
+  <ion-slides [options]="sliderOpts"
+              *ngIf="datalocalService.noticias.length === 0">
+    <ion-slide>
+      
+      <ion-label>No hay favoritos</ion-label>
+
+    </ion-slide>
+  </ion-slides>
+
+
+  <!-- Mostrar las noticias -->
+  <app-noticias *ngIf="datalocalService.noticias.length > 0"
+                [enFavoritos]="true"
+                [noticias]="datalocalService.noticias" ></app-noticias>
+
+
+</ion-content>
